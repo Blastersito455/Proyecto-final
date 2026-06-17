@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.subtitulo {
+    text-align: center;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.buscador button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: #2980b9;
+}
+
+.resultado {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.significado {
+    margin-bottom: 20px;
+}
+
+.pais {
+    background-color: #ecf0f1;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+input {
+    width: 400px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.card {
+    background-color: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    text-transform: capitalize;
+    color: #2c3e50;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+
+<h1>🌎 HispanoDic</h1>
+
+<form action="/buscar" method="POST">
+
+    <input type="text" name="palabra" placeholder="Escribe una palabra..." required>
+
+    <button type="submit">
+        Buscar
+    </button>
+
+</form>
+
+{% endblock %}

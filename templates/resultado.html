@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+Resultado
+{% endblock %}
+
+{% block content %}
+
+<h1>Resultado</h1>
+
+<div class="card">
+    <h2>{{ palabra }}</h2>
+
+    {% if significado %}
+    <h3>📖 Significado</h3>
+    <p>{{ significado }}</p>
+
+    {% if region %}
+    <p><strong>Región:</strong> {{ region }}</p>
+    {% endif %}
+
+    {% if equivalente %}
+    <p><strong>Equivalentes:</strong></p>
+    <ul>
+        {% for item in equivalente.split(',') %}
+        <li>{{ item.strip() }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% else %}
+    <p>No se encontró esa palabra en el diccionario.</p>
+    {% endif %}
+
+    <a href="/" class="volver">Volver</a>
+</div>
+
+{% endblock %}
