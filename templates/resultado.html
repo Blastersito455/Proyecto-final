@@ -22,8 +22,11 @@ Resultado
     {% if equivalente %}
     <p><strong>Equivalentes:</strong></p>
     <ul>
-        {% for item in equivalente.split(',') %}
-        <li>{{ item.strip() }}</li>
+        {% for item in equivalente.split(';') %}
+        {% set clean = item.strip() %}
+        {% if clean %}
+        <li>{{ clean }}</li>
+        {% endif %}
         {% endfor %}
     </ul>
     {% endif %}

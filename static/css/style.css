@@ -1,136 +1,345 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+/* ==========================================
+   ESTILOS GENERALES - BASE
+   ========================================== */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.contenedor {
-    width: 80%;
-    max-width: 900px;
-    margin: 40px auto;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #2c3e50;
-}
-
-.subtitulo {
-    text-align: center;
-    color: gray;
-    margin-bottom: 30px;
-}
-
-.buscador {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.buscador input {
-    flex: 1;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-.buscador button {
-    padding: 12px 20px;
-    border: none;
-    background-color: #3498db;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.buscador button:hover {
-    background-color: #2980b9;
-}
-
-.resultado {
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.significado {
-    margin-bottom: 20px;
-}
-
-.pais {
-    background-color: #ecf0f1;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-}
+/* ==========================================
+   HEADER - ENCABEZADO
+   ========================================== */
 
 .header {
-    background-color: #3498db;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   CONTENEDORES PRINCIPALES
+   ========================================== */
+
+.contenedor {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 main {
-    width: 80%;
+    width: 100%;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   BUSCADOR - FORMULARIO
+   ========================================== */
+
+.buscador {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buscador input,
+input {
+    flex: 1;
+    min-width: 250px;
+    padding: 14px 16px;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buscador input:focus,
+input:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 15px rgba(118, 75, 162, 0.5);
+    transform: translateY(-2px);
 }
 
 form {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-input {
-    width: 400px;
-    padding: 12px;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    font-size: 16px;
-}
+/* ==========================================
+   BOTONES
+   ========================================== */
 
+.buscador button,
 button {
-    padding: 12px 20px;
+    padding: 14px 28px;
     border: none;
-    border-radius: 10px;
-    background-color: #3498db;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
+.buscador button:hover,
 button:hover {
-    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.buscador button:active,
+button:active {
+    transform: translateY(-1px);
+}
+
+/* ==========================================
+   TÍTULOS Y TEXTO
+   ========================================== */
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-transform: capitalize;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* ==========================================
+   TARJETAS Y RESULTADOS
+   ========================================== */
+
+.resultado {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    border-left: 6px solid #667eea;
 }
 
 .card {
-    background-color: white;
+    background: white;
     max-width: 700px;
-    margin: auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-top: 6px solid #667eea;
 }
 
-.card h2 {
-    text-transform: capitalize;
-    color: #2c3e50;
+.significado {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
+
+/* ==========================================
+   PAÍS - BANDERAS CON COLORES
+   ========================================== */
+
+.pais {
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.pais:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* BANDERAS POR PAÍS */
+
+.pais.españa {
+    background: linear-gradient(90deg, #c60b1e 0%, #c60b1e 33%, #ffc400 33%, #ffc400 66%, #c60b1e 66%, #c60b1e 100%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pais.mexico {
+    background: linear-gradient(90deg, #006341 0%, #006341 33%, #ffffff 33%, #ffffff 66%, #ce1126 66%, #ce1126 100%);
+    color: #006341;
+}
+
+.pais.argentina {
+    background: linear-gradient(180deg, #74acdf 0%, #74acdf 33%, #ffffff 33%, #ffffff 66%, #ed4e6e 66%, #ed4e6e 100%);
+    color: #0052b4;
+}
+
+.pais.colombia {
+    background: linear-gradient(180deg, #ffcd00 0%, #ffcd00 50%, #0052cc 50%, #0052cc 75%, #ff0000 75%, #ff0000 100%);
+    color: #0052cc;
+}
+
+.pais.chile {
+    background: linear-gradient(180deg, #0052cc 0%, #0052cc 33%, #ffffff 33%, #ffffff 66%, #ff0000 66%, #ff0000 100%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pais.perú {
+    background: linear-gradient(90deg, #ce1126 0%, #ce1126 33%, #ffffff 33%, #ffffff 66%, #ce1126 66%, #ce1126 100%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pais.brazil {
+    background: linear-gradient(45deg, #009b3a 0%, #009b3a 50%, #ffd700 50%, #ffd700 100%);
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pais.venezuela {
+    background: linear-gradient(180deg, #ffcd00 0%, #ffcd00 33%, #0052cc 33%, #0052cc 66%, #ce1126 66%, #ce1126 100%);
+    color: #0052cc;
+}
+
+.pais.ecuador {
+    background: linear-gradient(180deg, #ffcd00 0%, #ffcd00 50%, #0052cc 50%, #0052cc 75%, #ce1126 75%, #ce1126 100%);
+    color: #0052cc;
+}
+
+.pais.bolivia {
+    background: linear-gradient(180deg, #de3033 0%, #de3033 33%, #f9c81e 33%, #f9c81e 66%, #007934 66%, #007934 100%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pais.paraguay {
+    background: linear-gradient(90deg, #0052cc 0%, #0052cc 33%, #ffffff 33%, #ffffff 66%, #ce1126 66%, #ce1126 100%);
+    color: #0052cc;
+}
+
+.pais.uruguay {
+    background: linear-gradient(180deg, #0052cc 0%, #0052cc 20%, #ffffff 20%, #ffffff 40%, #0052cc 40%, #0052cc 60%, #ffffff 60%, #ffffff 80%, #0052cc 80%);
+    background-size: cover;
+    color: #0052cc;
+    position: relative;
+}
+
+.pais.default {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   ENLACES
+   ========================================== */
 
 .volver {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     text-decoration: none;
-    background-color: #3498db;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.volver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .resultado {
+        padding: 20px;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+
+    .buscador input {
+        min-width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .pais {
+        display: block;
+        margin: 10px 0;
+    }
 }
