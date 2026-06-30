@@ -43,8 +43,8 @@ WORDS = [
     ),
     (
         "malparido",
-        "En Argentina y Uruguay se usa como insulto fuerte similar a 'hijo de puta'.",
-        "Argentina / Uruguay",
+        "Se usa como insulto fuerte similar a 'hijo de puta'.",
+        "Colombia",
         "hijo de puta (varios países); cabrón (México); malnacido (España)"
     ),
     (
